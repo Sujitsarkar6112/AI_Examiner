@@ -3,6 +3,7 @@ import { Card, CardHeader, CardContent, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { FileText, Upload, ChevronRight, Brain, FileQuestion, Loader2 } from 'lucide-react';
+import { API_BASE_URL } from '@/config';
 
 export interface Question {
   question: string;
@@ -10,7 +11,7 @@ export interface Question {
 }
 
 // Define API base URL
-export const API_BASE_URL = 'http://localhost:3000/api';
+// export const API_BASE_URL = 'http://localhost:3000/api';
 
 interface QuestionPaper {
   id: string;
