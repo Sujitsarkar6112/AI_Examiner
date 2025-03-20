@@ -49,7 +49,7 @@ bcrypt = Bcrypt(app)
 # Configure CORS for deployment - allow requests from any origin
 CORS(app, resources={
     r"/api/*": {
-        "origins": ["http://localhost:3002", "http://127.0.0.1:3002", "http://localhost:3003" "*"],
+        "origins": ["http://localhost:3002", "http://127.0.0.1:3002", "https://ai-examiner-nu.vercel.app/" "*"],
         "allow_headers": [
             "Content-Type", 
             "Authorization", 
@@ -1399,11 +1399,11 @@ def generate_random_string(length):
     return ''.join(random.choice(chars) for _ in range(length))
 
 if __name__ == '__main__':
-    # Hardcode port to 3000 to ensure consistency with frontend
-    port = 3000
+    # Use PORT environment variable if available (for Render compatibility)
+    port = int(os.environ.get("PORT", 3000))
     host = '0.0.0.0'
     
     logger.info(f"Starting server on {host}:{port}")
     
-    # Run the Flask app with hardcoded port
-    app.run(host=host, port=port, debug=True)
+    # Run the Flask app
+    app.run(host=host, port=port, debug=False)

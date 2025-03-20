@@ -6,6 +6,7 @@ google-generativeai
 pillow
 ag2[gemini]
 pymongo
+markdown
 bcrypt
 PyJWT
 Flask-Bcrypt

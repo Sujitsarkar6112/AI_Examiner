@@ -1,0 +1,11 @@
+services:
+  # Backend API service
+  - type: web
+    name: ai-examiner-backend
+    runtime: python
+    buildCommand: pip install -r server/requirements.txt
+    startCommand: cd server && python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    healthCheckPath: / 
