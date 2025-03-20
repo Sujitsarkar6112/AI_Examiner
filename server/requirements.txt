@@ -1,0 +1,11 @@
+flask
+flask-cors
+python-dotenv
+PyMuPDF
+google-generativeai
+pillow
+ag2[gemini]
+pymongo
+bcrypt
+PyJWT
+Flask-Bcrypt

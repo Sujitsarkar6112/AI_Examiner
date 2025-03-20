@@ -1,0 +1,174 @@
+2025-03-20 11:30:37,023 - INFO - Attempting to connect to MongoDB at: mongodb+srv://sarkarsujit9052:Amazing1@productioncluster.gbf9m.mongodb.net/
+2025-03-20 11:30:38,113 - INFO - Successfully connected to MongoDB
+2025-03-20 11:30:38,122 - INFO - Starting server on 0.0.0.0:3000
+2025-03-20 11:30:38,134 - WARNING -  * Debugger is active!
+2025-03-20 11:30:38,141 - INFO -  * Debugger PIN: 587-393-448
+2025-03-20 11:30:47,101 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:47] "OPTIONS /api/demo-login HTTP/1.1" 200 -
+2025-03-20 11:30:47,701 - INFO - Demo user created and logged in successfully: demo_x2Qdji6B
+2025-03-20 11:30:47,701 - INFO - Generated token (first 10 chars): eyJhbGciOi...
+2025-03-20 11:30:47,702 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:47] "POST /api/demo-login HTTP/1.1" 200 -
+2025-03-20 11:30:47,723 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:47] "OPTIONS /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:30:48,035 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:48] "OPTIONS /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:30:48,035 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:48] "OPTIONS /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:30:48,035 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:48] "OPTIONS /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:30:48,186 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:48] "GET /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:30:48,347 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:30:48,347 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:30:48,347 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:30:48,348 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:30:48,481 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:48] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:30:48,646 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:48] "GET /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:30:48,794 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:30:48,794 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:30:48,794 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:30:48,795 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:30:48,936 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:48] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:30:49,564 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:49] "GET /api/health HTTP/1.1" 200 -
+2025-03-20 11:30:49,564 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:49] "GET /api/health HTTP/1.1" 200 -
+2025-03-20 11:30:49,828 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:49] "OPTIONS /api/demo-login HTTP/1.1" 200 -
+2025-03-20 11:30:49,880 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:49] "OPTIONS /api/demo-login HTTP/1.1" 200 -
+2025-03-20 11:30:50,496 - INFO - Demo user created and logged in successfully: demo_XYFCbBan
+2025-03-20 11:30:50,496 - INFO - Generated token (first 10 chars): eyJhbGciOi...
+2025-03-20 11:30:50,497 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:50] "POST /api/demo-login HTTP/1.1" 200 -
+2025-03-20 11:30:50,676 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:30:50,677 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:30:50,677 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:30:50,677 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:30:50,711 - INFO - Demo user created and logged in successfully: demo_Xt9ps6pT
+2025-03-20 11:30:50,711 - INFO - Generated token (first 10 chars): eyJhbGciOi...
+2025-03-20 11:30:50,712 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:50] "POST /api/demo-login HTTP/1.1" 200 -
+2025-03-20 11:30:50,821 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:50] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:30:51,127 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:30:51,128 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:30:51,128 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:30:51,128 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:30:51,280 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:51] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:30:51,440 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:51] "GET /api/health HTTP/1.1" 200 -
+2025-03-20 11:30:51,440 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:51] "GET /api/health HTTP/1.1" 200 -
+2025-03-20 11:30:51,594 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:51] "GET /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:30:51,596 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:30:51,596 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:30:51,596 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:30:51,597 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:30:51,745 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:51] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:30:52,046 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:52] "GET /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:30:52,048 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:30:52,049 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:30:52,049 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:30:52,050 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:30:52,213 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:52] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:30:55,025 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:30:55,025 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:30:55,025 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:30:55,026 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:30:55,161 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:55] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:30:55,279 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:30:55,279 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:30:55,280 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:30:55,280 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:30:55,451 - INFO - 127.0.0.1 - - [20/Mar/2025 11:30:55] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:31:07,496 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:07] "OPTIONS /api/question-paper HTTP/1.1" 200 -
+2025-03-20 11:31:07,812 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:31:07,813 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:31:07,813 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:31:07,813 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:31:07,962 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:07] "POST /api/question-paper HTTP/1.1" 200 -
+2025-03-20 11:31:11,324 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:11] "GET /api/health HTTP/1.1" 200 -
+2025-03-20 11:31:11,636 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:11] "GET /api/health HTTP/1.1" 200 -
+2025-03-20 11:31:11,636 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:11] "OPTIONS /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:31:11,637 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:11] "OPTIONS /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:31:11,637 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:31:11,638 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:31:11,638 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:31:11,639 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:31:11,796 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:11] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:31:12,104 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:12] "GET /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:31:12,105 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:31:12,105 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:31:12,106 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:31:12,106 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:31:12,246 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:12] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:31:12,545 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:12] "GET /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:31:12,549 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:31:12,549 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:31:12,549 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:31:12,550 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:31:12,698 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:12] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:31:13,004 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:31:13,004 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:31:13,005 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:31:13,005 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:31:13,138 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:13] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:31:16,655 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:16] "GET /api/health HTTP/1.1" 200 -
+2025-03-20 11:31:16,656 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:16] "GET /api/health HTTP/1.1" 200 -
+2025-03-20 11:31:16,658 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:31:16,659 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:31:16,659 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:31:16,660 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:31:16,797 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:16] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:31:16,798 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:16] "GET /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:31:16,911 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:31:16,911 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:31:16,912 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:31:16,912 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:31:17,057 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:17] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:31:17,252 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:17] "GET /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:31:19,528 - INFO - 127.0.0.1 - - [20/Mar/2025 11:31:19] "OPTIONS /api/process-file HTTP/1.1" 200 -
+2025-03-20 11:31:19,922 - INFO - Processing file: 112.pdf, size: 0 bytes
+2025-03-20 11:31:19,925 - INFO - Processing file: temp_112.pdf (1511.6 KB)
+2025-03-20 11:31:19,926 - INFO - Converting PDF to images...
+2025-03-20 11:31:23,658 - INFO - Processing 12 pages with OCR...
+2025-03-20 11:33:05,348 - INFO - Parsing text sections...
+2025-03-20 11:33:05,349 - INFO - OCR processing complete: 7682 characters, 53 sections
+2025-03-20 11:33:05,449 - INFO - Successfully extracted text with ID b104253d-ffdc-420a-8c2d-ed15a7c4c19b, sections: 53
+2025-03-20 11:33:05,451 - INFO - 127.0.0.1 - - [20/Mar/2025 11:33:05] "POST /api/process-file HTTP/1.1" 200 -
+2025-03-20 11:33:05,760 - INFO - 127.0.0.1 - - [20/Mar/2025 11:33:05] "[33mOPTIONS /api/extracted-text HTTP/1.1[0m" 404 -
+2025-03-20 11:33:19,884 - INFO - 127.0.0.1 - - [20/Mar/2025 11:33:19] "OPTIONS /api/map-questions-answers HTTP/1.1" 200 -
+2025-03-20 11:33:20,395 - INFO - Gemini model successfully initialized with model: gemini-2.0-flash-thinking-exp-01-21
+2025-03-20 11:33:20,395 - INFO - Starting question-answer mapping with single prompt approach
+2025-03-20 11:33:20,395 - INFO - Sending unified mapping request to Gemini
+2025-03-20 11:33:32,988 - INFO - Successfully mapped 12 questions to answers in 12.59 seconds
+2025-03-20 11:33:32,989 - INFO - 127.0.0.1 - - [20/Mar/2025 11:33:32] "POST /api/map-questions-answers HTTP/1.1" 200 -
+2025-03-20 11:33:51,308 - INFO - 127.0.0.1 - - [20/Mar/2025 11:33:51] "OPTIONS /api/evaluate HTTP/1.1" 200 -
+2025-03-20 11:33:51,686 - INFO - Received evaluation request
+2025-03-20 11:33:51,825 - INFO - Using 7 valid question-answer pairs
+2025-03-20 11:33:51,825 - INFO - Using provided question paper: a) What are advantages of object oriented programming over procedural oriented programming?  [4]
+2025-03-20 11:33:51,825 - INFO - Evaluating structured answers for 112.pdf with 7 QA pairs
+2025-03-20 11:33:51,825 - INFO - Formatted 7 QA pairs for evaluation
+2025-03-20 11:33:51,826 - INFO - Starting multi-agent evaluation of answers
+2025-03-20 11:33:51,826 - INFO - Gemini model initialized successfully
+2025-03-20 11:33:51,826 - INFO - Evaluating question 1
+2025-03-20 11:33:59,257 - INFO - 127.0.0.1 - - [20/Mar/2025 11:33:59] "OPTIONS /api/extracted-texts HTTP/1.1" 200 -
+2025-03-20 11:33:59,566 - INFO - 127.0.0.1 - - [20/Mar/2025 11:33:59] "OPTIONS /api/extracted-texts HTTP/1.1" 200 -
+2025-03-20 11:33:59,567 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:33:59,567 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:33:59,567 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:33:59,567 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:33:59,693 - INFO - 127.0.0.1 - - [20/Mar/2025 11:33:59] "GET /api/extracted-texts HTTP/1.1" 200 -
+2025-03-20 11:34:00,001 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:34:00,001 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:34:00,001 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:34:00,001 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:34:00,154 - INFO - 127.0.0.1 - - [20/Mar/2025 11:34:00] "GET /api/extracted-texts HTTP/1.1" 200 -
+2025-03-20 11:34:01,457 - INFO - Completed Theoretical_Evaluator evaluation for question 1
+2025-03-20 11:34:10,536 - INFO - Completed Practical_Evaluator evaluation for question 1
+2025-03-20 11:34:20,396 - INFO - Completed Holistic_Evaluator evaluation for question 1
+2025-03-20 11:34:21,366 - INFO - 127.0.0.1 - - [20/Mar/2025 11:34:21] "GET /api/health HTTP/1.1" 200 -
+2025-03-20 11:34:21,367 - INFO - 127.0.0.1 - - [20/Mar/2025 11:34:21] "GET /api/health HTTP/1.1" 200 -
+2025-03-20 11:34:21,367 - INFO - 127.0.0.1 - - [20/Mar/2025 11:34:21] "OPTIONS /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:34:21,368 - INFO - 127.0.0.1 - - [20/Mar/2025 11:34:21] "OPTIONS /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:34:21,369 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:34:21,369 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:34:21,369 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:34:21,370 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:34:21,519 - INFO - 127.0.0.1 - - [20/Mar/2025 11:34:21] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:34:21,819 - INFO - 127.0.0.1 - - [20/Mar/2025 11:34:21] "GET /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:34:21,821 - INFO - Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkZjRjMzJjLWJjZWUtNGY3Ni1iNjQ0LTE4OTcyNTE0ZmE4YyIsInVzZXJuYW1lIjoiZGVtb194MlFkamk2QiIsImVtYWlsIjoiZGVtb194MlFkamk2QkBleGFtcGxlLmNvbSIsInJvbGUiOiJkZW1vIiwiZXhwIjoxNzQyNTM2ODQ3LjcwMTIzMX0.JqsZR8PMbqU3kwZQ0SLbMSXeDIhOOc5FG6Qil1buLzo
+2025-03-20 11:34:21,821 - INFO - Token extracted: eyJhbGciOi...
+2025-03-20 11:34:21,822 - INFO - Attempting to decode token with secret key: eyJhb...
+2025-03-20 11:34:21,822 - INFO - Token decoded successfully. User ID: 0df4c32c-bcee-4f76-b644-18972514fa8c
+2025-03-20 11:34:21,973 - INFO - 127.0.0.1 - - [20/Mar/2025 11:34:21] "GET /api/question-papers HTTP/1.1" 200 -
+2025-03-20 11:34:22,260 - INFO - 127.0.0.1 - - [20/Mar/2025 11:34:22] "GET /api/evaluations HTTP/1.1" 200 -
+2025-03-20 11:34:28,762 - INFO - Score for question 1: 3.5 out of 5
+2025-03-20 11:34:28,763 - INFO - Evaluating question 2
+2025-03-20 11:34:32,874 - INFO - Completed Theoretical_Evaluator evaluation for question 2
