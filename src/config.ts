@@ -3,7 +3,7 @@
 // In development, use localhost; in production, use relative path for same-domain API
 const isProduction = import.meta.env.PROD || false;
 export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 
-                           (isProduction ? '/api' : 'http://localhost:3000/api');
+                           (isProduction ? '/api' : 'https://ai-examiner-v3mh.onrender.com');
 
 // Log the API URL in non-production environments only
 if (!isProduction) {

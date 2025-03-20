@@ -48,8 +48,8 @@ bcrypt = Bcrypt(app)
 
 # Configure CORS for deployment - allow requests from any origin
 CORS(app, resources={
-    r"/api/*": {
-        "origins": ["http://localhost:3002", "http://127.0.0.1:3002", "https://ai-examiner-nu.vercel.app/", "https://ai-examiner-v3mh.onrender.com", "*"],
+    r"/*": {
+        "origins": ["http://localhost:3002", "http://127.0.0.1:3002", "https://ai-examiner-nu.vercel.app", "https://ai-examiner-v3mh.onrender.com", "*"],
         "allow_headers": [
             "Content-Type", 
             "Authorization", 
@@ -1317,6 +1317,7 @@ def run_with_timeout(func, args=(), kwargs={}, timeout=60):
         raise TimeoutError(f"Function execution timed out after {timeout} seconds")
 
 @app.route('/api/demo-login', methods=['POST', 'OPTIONS'])
+@app.route('/demo-login', methods=['POST', 'OPTIONS'])
 def demo_login():
     """Create and authenticate a demo user."""
     if request.method == 'OPTIONS':

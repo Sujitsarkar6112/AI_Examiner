@@ -117,14 +117,14 @@ evaluread/
 The frontend is deployed on Vercel at [https://ai-examiner-nu.vercel.app/](https://ai-examiner-nu.vercel.app/).
 
 ### Backend
-The backend is deployed on Render at [https://aiexaminer-production.up.railway.app](https://aiexaminer-production.up.railway.app) and can also be deployed to Render.
+The backend is deployed on Render at [https://ai-examiner-v3mh.onrender.com](https://ai-examiner-v3mh.onrender.com).
 
 #### Deploying to Render
 1. Create a new Web Service on Render
 2. Connect your GitHub repository
 3. Use the following settings:
-   - **Build Command**: `pip install -r server/requirements.txt`
-   - **Start Command**: `cd server && python app.py`
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `gunicorn app:app`
 4. Add the following environment variables:
    - `GEMINI_API_KEY`: Your Google Gemini API key
    - `JWT_SECRET`: Secret key for JWT token generation

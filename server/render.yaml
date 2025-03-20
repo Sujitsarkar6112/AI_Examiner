@@ -3,8 +3,8 @@ services:
   - type: web
     name: ai-examiner-backend
     runtime: python
-    buildCommand: pip install -r server/requirements.txt
-    startCommand: gunicorn --chdir server app:app
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
