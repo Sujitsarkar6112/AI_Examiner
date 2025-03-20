@@ -3,11 +3,11 @@ import { Card, CardHeader, CardContent, CardTitle, CardDescription } from '@/com
 import { FileText, Check, FileUp, MapPin, Brain } from 'lucide-react';
 import { toast } from 'sonner';
 import UploadStep from './UploadStep';
+import { API_BASE_URL } from '@/config';
 import {
   ExtractStep,
   MapStep,
   EvaluateStep,
-  API_BASE_URL,
   Question
 } from './UploadEvaluateSteps';
 

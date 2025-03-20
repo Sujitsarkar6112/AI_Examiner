@@ -47,24 +47,21 @@ app.config['JWT_SECRET'] = JWT_SECRET
 bcrypt = Bcrypt(app)
 
 # Configure CORS for deployment - allow requests from any origin
-CORS(app, resources={
-    r"/*": {
-        "origins": ["http://localhost:3002", "http://127.0.0.1:3002", "https://ai-examiner-nu.vercel.app", "https://ai-examiner-v3mh.onrender.com", "*"],
-        "allow_headers": [
-            "Content-Type", 
-            "Authorization", 
-            "Access-Control-Allow-Origin",
-            "Access-Control-Allow-Headers",
-            "Access-Control-Allow-Methods",
-            "Cache-Control",
-            "Pragma"
-        ],
-        "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-        "supports_credentials": True,
-        "expose_headers": ["Content-Type", "Authorization"],
-        "max_age": 86400
-    }
-})
+CORS(app, origins=["http://localhost:3002", "http://127.0.0.1:3002", "https://ai-examiner-nu.vercel.app", "https://ai-examiner-v3mh.onrender.com", "*"],
+    allow_headers=[
+        "Content-Type", 
+        "Authorization", 
+        "Access-Control-Allow-Origin",
+        "Access-Control-Allow-Headers",
+        "Access-Control-Allow-Methods",
+        "Cache-Control",
+        "Pragma",
+        "X-Requested-With"
+    ],
+    methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    supports_credentials=True,
+    expose_headers=["Content-Type", "Authorization"],
+    max_age=86400)
 
 # Register endpoint
 @app.route('/api/register', methods=['POST'])
