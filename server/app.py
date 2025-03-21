@@ -1396,6 +1396,32 @@ def generate_random_string(length):
     chars = string.ascii_letters + string.digits
     return ''.join(random.choice(chars) for _ in range(length))
 
+# Add route without /api prefix for compatibility with frontend
+@app.route('/process-file', methods=['POST', 'OPTIONS'])
+def process_file_no_prefix():
+    """Process a file using OCR and return the extracted text (no API prefix)."""
+    return process_file()
+
+@app.route('/map-questions-answers', methods=['POST', 'OPTIONS'])
+def map_questions_answers_no_prefix():
+    """Map questions to answers in extracted text (no API prefix)."""
+    return map_questions_answers()
+
+@app.route('/evaluate', methods=['POST', 'OPTIONS'])
+def evaluate_answers_no_prefix():
+    """Evaluate answers from OCR text (no API prefix)."""
+    return evaluate_answers()
+
+@app.route('/evaluations', methods=['GET', 'POST', 'OPTIONS'])
+def evaluations_handler_no_prefix():
+    """Handle evaluations requests - GET to retrieve all, POST to save a new one (no API prefix)."""
+    return evaluations_handler()
+
+@app.route('/health', methods=['GET', 'OPTIONS'])
+def health_check_no_prefix():
+    """Simple health check endpoint to verify server is running (no API prefix)."""
+    return health_check()
+
 if __name__ == '__main__':
     # Use PORT environment variable if available (for Render compatibility)
     port = int(os.environ.get("PORT", 3000))
