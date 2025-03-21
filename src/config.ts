@@ -12,27 +12,33 @@ if (!isProduction) {
 
 // API Endpoints
 export const API_ENDPOINTS = {
-  PROCESS_FILE: `${API_BASE_URL}/api/process-file`,
-  EVALUATE: `${API_BASE_URL}/api/evaluate`,
-  MAP_QUESTIONS: `${API_BASE_URL}/api/map-questions-answers`,
-  EVALUATIONS: `${API_BASE_URL}/api/evaluations`,
-  HEALTH: `${API_BASE_URL}/api/health`,
-  DEMO_LOGIN: `${API_BASE_URL}/api/demo-login`,
+  PROCESS_FILE: `${API_BASE_URL}/process-file`,
+  EVALUATE: `${API_BASE_URL}/evaluate`,
+  MAP_QUESTIONS: `${API_BASE_URL}/map-questions-answers`,
+  MAP_QUESTIONS_ADVANCED: `${API_BASE_URL}/map-questions-answers-advanced`,
+  EVALUATIONS: `${API_BASE_URL}/evaluations`,
+  EVALUATION: (id?: string) => id ? `${API_BASE_URL}/evaluation/${id}` : `${API_BASE_URL}/evaluation`,
+  CLEAR_EVALUATIONS: `${API_BASE_URL}/clear-evaluations`,
+  HEALTH: `${API_BASE_URL}/health`,
+  DEMO_LOGIN: `${API_BASE_URL}/demo-login`,
   AUTH: {
-    LOGIN: `${API_BASE_URL}/api/login`,
-    REGISTER: `${API_BASE_URL}/api/register`,
-    PROFILE: `${API_BASE_URL}/api/auth/profile`,
+    LOGIN: `${API_BASE_URL}/login`,
+    REGISTER: `${API_BASE_URL}/register`,
+    PROFILE: `${API_BASE_URL}/auth/profile`,
   },
   QUESTION_PAPERS: {
-    LIST: `${API_BASE_URL}/api/question-papers`,
-    PROCESS: `${API_BASE_URL}/api/process-question-paper`,
-    GET: (id: string) => `${API_BASE_URL}/api/question-paper/${id}`,
-    DELETE: (id: string) => `${API_BASE_URL}/api/question-paper/${id}`,
+    LIST: `${API_BASE_URL}/question-papers`,
+    PROCESS: `${API_BASE_URL}/process-question-paper`,
+    GET: (id: string) => `${API_BASE_URL}/question-paper/${id}`,
+    DELETE: (id: string) => `${API_BASE_URL}/question-paper/${id}`,
+    UPLOAD: `${API_BASE_URL}/question-papers/upload`,
   },
   EXTRACTED_TEXTS: {
-    LIST: `${API_BASE_URL}/api/extracted-texts`,
-    GET: (id: string) => `${API_BASE_URL}/api/extracted-text/${id}`,
-    DELETE: (id: string) => `${API_BASE_URL}/api/extracted-text/${id}`,
+    LIST: `${API_BASE_URL}/extracted-texts`,
+    GET: (id: string) => `${API_BASE_URL}/extracted-text/${id}`,
+    DELETE: (id: string) => `${API_BASE_URL}/extracted-text/${id}`,
+    CLEAR: `${API_BASE_URL}/clear-extracted-texts`,
+    EVALUATE: `${API_BASE_URL}/evaluate-extracted`,
   }
 };
 

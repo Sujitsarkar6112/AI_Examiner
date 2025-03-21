@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Upload } from "lucide-react";
 import { useExtraction } from './ExtractionContext';
 import { toast } from "sonner";
+import { API_ENDPOINTS } from "@/config";
 
 const QuestionPaperSelector: React.FC = () => {
   const {
@@ -30,8 +31,8 @@ const QuestionPaperSelector: React.FC = () => {
     formData.append('file', file);
 
     try {
-      // Replace with your actual upload API endpoint
-      const response = await fetch('/api/question-papers/upload', {
+      // Use API endpoint from config
+      const response = await fetch(API_ENDPOINTS.QUESTION_PAPERS.UPLOAD, {
         method: 'POST',
         body: formData,
       });

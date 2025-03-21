@@ -2,7 +2,7 @@
 // All processing now happens on the server side
 import { toast } from 'sonner';
 import { fetchData, postData, deleteData } from '../utils/api';
-import { API_BASE_URL } from '../config';
+import { API_ENDPOINTS } from '../config';
 
 // OCR result interface
 export interface OCRResult {
@@ -59,7 +59,7 @@ export const evaluateAnswers = async (
   console.log('Delegating evaluation to server...');
   
   try {
-    const result = await postData<EvaluationResult>('/evaluate', {
+    const result = await postData<EvaluationResult>(API_ENDPOINTS.EVALUATE, {
       text: ocrResult.text,
       fileName,
     });
@@ -75,7 +75,7 @@ export const evaluateAnswers = async (
 // Function to get saved evaluations from the API
 export const getSavedEvaluations = async (): Promise<EvaluationResult[]> => {
   try {
-    return await fetchData<EvaluationResult[]>('/evaluations');
+    return await fetchData<EvaluationResult[]>(API_ENDPOINTS.EVALUATIONS);
   } catch (error: any) {
     console.error('Failed to fetch evaluations:', error);
     toast.error('Failed to fetch evaluations. Please check your connection.');
@@ -88,7 +88,15 @@ export const saveEvaluation = async (
   evaluation: SaveEvaluationRequest
 ): Promise<EvaluationResult> => {
   try {
-    const result = await postData<EvaluationResult>('/evaluation', evaluation);
+    // Convert to a generic object to satisfy RequestData type
+    const data = {
+      fileName: evaluation.fileName,
+      timestamp: evaluation.timestamp,
+      markdownContent: evaluation.markdownContent,
+      ...(evaluation.questionPaperId ? { questionPaperId: evaluation.questionPaperId } : {})
+    };
+    
+    const result = await postData<EvaluationResult>(API_ENDPOINTS.EVALUATION(), data);
     toast.success('Evaluation saved successfully');
     return result;
   } catch (error: any) {
@@ -101,7 +109,7 @@ export const saveEvaluation = async (
 // Function to get a specific evaluation by ID
 export const getEvaluationById = async (id: string): Promise<EvaluationResult | null> => {
   try {
-    return await fetchData<EvaluationResult>(`/evaluation/${id}`);
+    return await fetchData<EvaluationResult>(API_ENDPOINTS.EVALUATION(id));
   } catch (error: any) {
     console.error(`Error fetching evaluation with ID ${id}:`, error);
     toast.error('Failed to fetch evaluation. Please try again.');
@@ -112,7 +120,7 @@ export const getEvaluationById = async (id: string): Promise<EvaluationResult | 
 // Delete evaluation via the API
 export const deleteEvaluation = async (id: string): Promise<boolean> => {
   try {
-    await deleteData(`/evaluation/${id}`);
+    await deleteData(API_ENDPOINTS.EVALUATION(id));
     toast.success('Evaluation deleted successfully');
     return true;
   } catch (error: any) {
@@ -125,7 +133,7 @@ export const deleteEvaluation = async (id: string): Promise<boolean> => {
 // Delete all evaluations
 export const deleteAllEvaluations = async (): Promise<boolean> => {
   try {
-    await deleteData('/clear-evaluations');
+    await deleteData(API_ENDPOINTS.CLEAR_EVALUATIONS);
     toast.success('All evaluations deleted successfully');
     return true;
   } catch (error: any) {
@@ -144,15 +152,16 @@ export const evaluateExtractedText = async (
   console.log('Evaluating extracted text...');
   
   try {
-    const request: EvaluationRequest = {
+    // Convert to a generic object to satisfy RequestData type
+    const data = {
       text: extractedText,
       fileName,
-      questionPaperId: questionPaperId === 'none' ? undefined : questionPaperId
+      ...(questionPaperId && questionPaperId !== 'none' ? { questionPaperId } : {})
     };
     
-    console.log('Sending evaluation request:', request);
+    console.log('Sending evaluation request:', data);
     
-    const result = await postData<EvaluationResult>('/evaluate', request);
+    const result = await postData<EvaluationResult>(API_ENDPOINTS.EVALUATE, data);
     console.log('Received evaluation result:', result);
     return result;
   } catch (error) {
@@ -174,7 +183,7 @@ export const mapQuestionsWithAnswers = async (
       throw new Error('Question paper ID is required for mapping');
     }
     
-    const result = await postData('/map-questions-answers-advanced', {
+    const result = await postData(API_ENDPOINTS.MAP_QUESTIONS_ADVANCED, {
       extracted_text: extractedText,
       question_paper_id: questionPaperId
     });
@@ -213,7 +222,7 @@ export const automatedEvaluationProcess = async (
     const formData = new FormData();
     formData.append('file', file);
     
-    const ocrResponse = await fetch(`${API_BASE_URL}/process-file`, {
+    const ocrResponse = await fetch(API_ENDPOINTS.PROCESS_FILE, {
       method: 'POST',
       body: formData
     });

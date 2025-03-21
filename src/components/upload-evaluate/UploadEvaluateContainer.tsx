@@ -3,13 +3,15 @@ import { Card, CardHeader, CardContent, CardTitle, CardDescription } from '@/com
 import { FileText, Check, FileUp, MapPin, Brain } from 'lucide-react';
 import { toast } from 'sonner';
 import UploadStep from './UploadStep';
-import { API_BASE_URL } from '@/config';
+import { API_BASE_URL, API_ENDPOINTS } from '@/config';
 import {
   ExtractStep,
   MapStep,
   EvaluateStep,
   Question
 } from './UploadEvaluateSteps';
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast";
 
 // Define types for the components
 interface QuestionPaper {
@@ -91,7 +93,7 @@ const getAuthToken = async (): Promise<string | null> => {
     while (retries > 0) {
       try {
         console.log(`Attempting to get demo token (${retries} retries left)`);
-        const response = await fetch(`${API_BASE_URL}/demo-login`, {
+        const response = await fetch(API_ENDPOINTS.DEMO_LOGIN, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -223,6 +225,7 @@ const UploadEvaluateContainer: React.FC = () => {
   const [totalScore, setTotalScore] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [processingError, setProcessingError] = useState<string | null>(null);
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
 
   // Initialize authentication and question paper data
   useEffect(() => {

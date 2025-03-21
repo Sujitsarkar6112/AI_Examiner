@@ -1,5 +1,6 @@
 import { toast } from 'sonner';
 import { fetchData, postData, deleteData } from '../utils/api';
+import { API_ENDPOINTS } from '../config';
 
 export interface ExtractedText {
   id: string;
@@ -10,7 +11,7 @@ export interface ExtractedText {
 
 export async function getExtractedTexts(): Promise<ExtractedText[]> {
   try {
-    const data = await fetchData<ExtractedText[]>('/extracted-texts');
+    const data = await fetchData<ExtractedText[]>(API_ENDPOINTS.EXTRACTED_TEXTS.LIST);
     return data;
   } catch (error) {
     console.error('Error fetching extracted texts:', error);
@@ -21,7 +22,7 @@ export async function getExtractedTexts(): Promise<ExtractedText[]> {
 
 export async function getExtractedText(textId: string): Promise<ExtractedText | null> {
   try {
-    const data = await fetchData<ExtractedText>(`/extracted-text/${textId}`);
+    const data = await fetchData<ExtractedText>(API_ENDPOINTS.EXTRACTED_TEXTS.GET(textId));
     return data;
   } catch (error) {
     console.error(`Error fetching extracted text ${textId}:`, error);
@@ -32,7 +33,7 @@ export async function getExtractedText(textId: string): Promise<ExtractedText | 
 
 export async function deleteExtractedText(textId: string): Promise<boolean> {
   try {
-    await deleteData(`/extracted-text/${textId}`);
+    await deleteData(API_ENDPOINTS.EXTRACTED_TEXTS.DELETE(textId));
     toast.success('Extracted text deleted successfully');
     return true;
   } catch (error) {
@@ -44,7 +45,7 @@ export async function deleteExtractedText(textId: string): Promise<boolean> {
 
 export async function clearAllExtractedTexts(): Promise<boolean> {
   try {
-    await deleteData('/clear-extracted-texts');
+    await deleteData(API_ENDPOINTS.EXTRACTED_TEXTS.CLEAR);
     toast.success('All extracted texts deleted successfully');
     return true;
   } catch (error) {
@@ -56,7 +57,7 @@ export async function clearAllExtractedTexts(): Promise<boolean> {
 
 export async function evaluateExtractedText(textId: string, questionPaperId?: string) {
   try {
-    const result = await postData('/evaluate-extracted', {
+    const result = await postData(API_ENDPOINTS.EXTRACTED_TEXTS.EVALUATE, {
       textId,
       questionPaperId,
     });

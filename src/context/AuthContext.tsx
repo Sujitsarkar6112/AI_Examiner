@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { toast } from 'sonner';
 import { postData } from '../utils/api';
 import api from '../utils/api';
-import { AUTH_TOKEN_KEY } from '../config';
+import { AUTH_TOKEN_KEY, API_ENDPOINTS } from '../config';
 
 interface User {
   id: string;
@@ -90,7 +90,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
       
       // Make an API call to authenticate
-      const response = await postData<{token: string, user: User}>('/login', {
+      const response = await postData<{token: string, user: User}>(API_ENDPOINTS.AUTH.LOGIN, {
         email,
         password
       });
@@ -134,7 +134,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
       
       // Make an API call to register
-      const response = await postData<{token: string, user: User}>('/register', {
+      const response = await postData<{token: string, user: User}>(API_ENDPOINTS.AUTH.REGISTER, {
         username: name,
         email,
         password
@@ -175,7 +175,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     
     try {
       // Make an API call to demo login endpoint
-      const response = await postData<{token: string, user: User}>('/demo-login', {});
+      const response = await postData<{token: string, user: User}>(API_ENDPOINTS.DEMO_LOGIN, {});
       
       if (response && response.token) {
         const userData: User = {

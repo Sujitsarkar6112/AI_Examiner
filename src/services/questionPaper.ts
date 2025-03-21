@@ -1,6 +1,7 @@
 import { toast } from 'sonner';
-import { fetchData, postData, deleteData, RequestData } from '../utils/api';
 import api from '../utils/api';
+import { fetchData, postData, deleteData } from '../utils/api';
+import { API_ENDPOINTS } from '../config';
 
 export interface Question {
   id: string;
@@ -25,85 +26,84 @@ const getErrorMessage = (error: unknown): string => {
 };
 
 // Process a question paper file
-export const processQuestionPaper = async (file: File): Promise<QuestionPaper> => {
-  console.log('Processing question paper:', file.name);
-  
+export async function uploadQuestionPaperFile(file: File): Promise<QuestionPaper | null> {
   try {
+    if (!file) {
+      throw new Error('No file provided');
+    }
+
+    // Create a FormData object to send the file
     const formData = new FormData();
     formData.append('file', file);
-    
-    // For form data, we need to use the axios instance directly
-    const response = await api.post('/process-question-paper', formData, {
+
+    // Make the API request
+    const response = await api.post(API_ENDPOINTS.QUESTION_PAPERS.PROCESS, formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
     });
+
+    // Process and return the response
+    return response.data;
+  } catch (error: any) {
+    console.error('Error uploading question paper:', error);
     
-    // Get the server response
-    const result = response.data;
-    console.log('Server response:', result);
+    // Try to extract a helpful error message
+    const errorMessage = error.response?.data?.error || error.message || 'Unknown error';
+    toast.error(`Failed to upload question paper: ${errorMessage}`);
     
-    // The server now handles all processing and returns a complete question paper
-    return result;
-  } catch (error) {
-    console.error('Error processing question paper:', error);
-    toast.error(error instanceof Error ? error.message : 'Failed to process question paper');
-    throw new Error('Unable to process');
-  }
-};
-
-// Save question paper
-export const saveQuestionPaper = async (fileName: string, questions: Question[]): Promise<QuestionPaper> => {
-  const questionPaper = {
-    fileName,
-    timestamp: new Date().toISOString(),
-    questions,
-    totalMarks: questions.reduce((total, q) => total + q.marks, 0)
-  };
-  
-  try {
-    return await postData<QuestionPaper>('/question-paper', questionPaper);
-  } catch (error) {
-    console.error('Error saving question paper:', error);
-    toast.error('Failed to save question paper: Server unavailable');
-    throw error;
-  }
-};
-
-// Get all saved question papers
-export const getQuestionPapers = async (): Promise<QuestionPaper[]> => {
-  try {
-    return await fetchData<QuestionPaper[]>('/question-papers');
-  } catch (error: unknown) {
-    console.error('Error fetching question papers:', error);
-    toast.error(`Failed to fetch question papers: ${getErrorMessage(error) || 'Server unavailable'}`);
-    return [];
-  }
-};
-
-// Get a specific question paper by ID
-export const getQuestionPaper = async (paperId: string): Promise<QuestionPaper | null> => {
-  try {
-    return await fetchData<QuestionPaper>(`/question-paper/${paperId}`);
-  } catch (error: unknown) {
-    console.error(`Error fetching question paper with ID ${paperId}:`, error);
-    toast.error('Failed to fetch question paper. Please try again.');
     return null;
   }
-};
+}
+
+// Save question paper
+export async function saveQuestionPaper(
+  questionPaper: Partial<QuestionPaper>
+): Promise<QuestionPaper | null> {
+  try {
+    // Save the question paper
+    return await postData<QuestionPaper>(API_ENDPOINTS.QUESTION_PAPERS.GET(''), questionPaper);
+  } catch (error: any) {
+    console.error('Error saving question paper:', error);
+    toast.error('Failed to save question paper');
+    return null;
+  }
+}
+
+// Get all saved question papers
+export async function getQuestionPapers(): Promise<QuestionPaper[]> {
+  try {
+    return await fetchData<QuestionPaper[]>(API_ENDPOINTS.QUESTION_PAPERS.LIST);
+  } catch (error: any) {
+    console.error('Error fetching question papers:', error);
+    toast.error('Failed to fetch question papers');
+    return [];
+  }
+}
+
+// Get a specific question paper by ID
+export async function getQuestionPaper(id: string): Promise<QuestionPaper | null> {
+  try {
+    return await fetchData<QuestionPaper>(API_ENDPOINTS.QUESTION_PAPERS.GET(id));
+  } catch (error: any) {
+    console.error(`Error fetching question paper ${id}:`, error);
+    toast.error('Failed to fetch question paper');
+    return null;
+  }
+}
 
 // Delete a question paper
-export const deleteQuestionPaper = async (paperId: string): Promise<boolean> => {
+export async function deleteQuestionPaper(id: string): Promise<boolean> {
   try {
-    await deleteData(`/question-paper/${paperId}`);
+    await deleteData(API_ENDPOINTS.QUESTION_PAPERS.DELETE(id));
     toast.success('Question paper deleted successfully');
     return true;
-  } catch (error) {
-    console.error('Error deleting question paper:', error);
-    toast.error('Failed to delete question paper: Server unavailable');
+  } catch (error: any) {
+    console.error(`Error deleting question paper ${id}:`, error);
+    toast.error('Failed to delete question paper');
     return false;
   }
-};
+}
 
 // Function to calculate the total marks for a question paper
 export const calculateTotalMarks = (questionPaper: QuestionPaper): number => {
