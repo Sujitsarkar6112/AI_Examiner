@@ -48,7 +48,7 @@ bcrypt = Bcrypt(app)
 
 # Configure CORS for deployment - allow requests from any origin
 # All routes are standardized to use /api prefix
-CORS(app, origins=["http://localhost:3002", "http://127.0.0.1:3002", "https://ai-examiner-nu.vercel.app", "https://ai-examiner-v3mh.onrender.com", "*"],
+CORS(app, origins=["http://localhost:3002", "http://127.0.0.1:3002", "https://ai-examiner-nu.vercel.app", "https://ai-examiner-v3mh.onrender.com/api", "*"],
     allow_headers=[
         "Content-Type", 
         "Authorization", 
